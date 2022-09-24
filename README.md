@@ -4,7 +4,7 @@
 #### 1. Define Macro
 - In FreeRTOSConfig.h
 
-![Screenshot](screenshots/Pasted\ image\ 20220923234008.png)
+![Screenshot](screenshots/Pasted%20image%2020220923234008.png)
 
 ![[Pasted image 20220923234008.png]]
 ---
