@@ -3,6 +3,8 @@
 ---
 #### 1. Define Macro
 - In FreeRTOSConfig.h
+![alt text](.images/Pasted image 20220923234008.png)
+
 ![[Pasted image 20220923234008.png]]
 ---
 #### 2. Define The New EDF List
