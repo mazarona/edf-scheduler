@@ -60,7 +60,6 @@
 
 <h1 align="center">Messing Changes In Thesis</h1>
 
-<hr style="border:3px solid gray">
 
 ### 1. Make Sure Idle Task Stays At The End Of The EDF List
 
