@@ -58,33 +58,34 @@
 <hr style="border:3px solid gray">
 
 <p align="center">Messing Changes In Thesis</p>
+
 ---
 
 ### 1. Make Sure Idle Task Stays At The End Of The EDF List
 
 - In tasks.c in `prvIdleTask()`
 
-![Screenshot](Pasted%20image%2020220924023633.png)
+![Screenshot](screenshots/Pasted%20image%2020220924023633.png)
 - Note: `pxCurrentTCB` inside of the IDLE task code points to the IDLE task itself.
 - Note: `xMaxTaskDeadLine` is a variable that holds the maximum deadline value of all created tasks. So The IDLE task will always be late from the maximum task deadline by `configINIT_IDLE_PERIOD` as it always updates with the current tick.
 - In tasks.c 
 
-![Screenshot](Pasted%20image%2020220924031208.png)
+![Screenshot](screenshots/Pasted%20image%2020220924031208.png)
 - In tasks.c in `xTaskPeriodicCreate()`
 
-![Screenshot](Pasted%20image%2020220924031043.png)
+![Screenshot](screenshots/Pasted%20image%2020220924031043.png)
 ---
 
 ### 2. Modifiy xTaskIncrementTick To Revaluate Awakened Tasks Deadline. And Insert It At The Right Place In EDF List
 - In tasks.c in `xTaskIncrementTick()`
 
-![Screenshot](Pasted%20image%2020220924025044.png)
+![Screenshot](screenshots/Pasted%20image%2020220924025044.png)
 ---
 
 ### 3. Change The Logic Of When A Context Switch Should Happen.
 
 - In tasks.c in `xTaskIncrementTick()`
 
-![Screenshot](Pasted%20image%2020220924030036.png)
+![Screenshot](screenshots/Pasted%20image%2020220924030036.png)
 - Note: Instead of comparing priorities, I changed it to compare if the just awakened task has lower deadline than the current running task. If that happen then a context switch should take place. No need to worry about what node will the contextswitch method will choose since we have already modified it to choose the head node at the EDF list as said in the Thesis. All we had to do is to signal that a context switch needs to happen when a task of lower deadline value than the current running task awakens.
 
