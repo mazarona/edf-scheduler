@@ -87,5 +87,5 @@
 - In tasks.c in `xTaskIncrementTick()`
 
 ![Screenshot](screenshots/Pasted%20image%2020220924030036.png)
-- Note: Instead of comparing priorities, I changed it to compare if the just awakened task has lower deadline than the current running task. If that happen then a context switch should take place. No need to worry about what node will the contextswitch method will choose since we have already modified it to choose the head node at the EDF list as said in the Thesis. All we had to do is to signal that a context switch needs to happen when a task of lower deadline value than the current running task awakens.
+- Note: Instead of comparing priorities, I changed it to compare deadlines if the just awakened task has lower deadline than the current running task. If that happen then a context switch should take place. No need to worry about what node will the contextswitch method will choose since we have already modified it to choose the head node at the EDF list as said in the Thesis. All we had to do is to signal that a context switch needs to happen when a task of lower deadline value than the current running task awakens.
 
