@@ -1,16 +1,16 @@
 # EDF Schedular
 # <center>Thesis Implementation</center>
----
+
 ### 1. Define Macro
 - In FreeRTOSConfig.h
 
 ![Screenshot](screenshots/Pasted%20image%2020220923234008.png)
----
+<hr style="border:2px solid gray">
 ### 2. Define The New EDF List
 - In tasks.c
 
 ![Screenshot](screenshots/Pasted%20image%2020220923221401.png)
----
+<hr style="border:2px solid gray">
 ### 3. Initialize The New EDF List
 - In tasks.c in `prvInitialiseTaskLists()`
 
