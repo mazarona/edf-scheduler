@@ -2,8 +2,6 @@
 
 <h1 align="center">Thesis Implementation</h1>
 
-<hr style="border:3px solid gray">
-
 ### 1. Define Macro
 - In FreeRTOSConfig.h
 
